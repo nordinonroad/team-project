@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "admin",
+    "password": 333,
+    "database": "teamproject",
+    "host": "127.0.0.1",
+    "dialect": "postgess"
+  },
+  "test": {
+    "username": "admin",
+    "password": 333,
+    "database": "teamproject",
+    "host": "127.0.0.1",
+    "dialect": "postgess"
+  },
+  "production": {
+    "username": "admin",
+    "password": 333,
+    "database": "teamproject",
+    "host": "127.0.0.1",
+    "dialect": "postgess"
+  }
+}
