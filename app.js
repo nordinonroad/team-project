@@ -7,6 +7,7 @@ const FileStore = require('session-file-store')(session);
 
 const indexRouter = require('./routes/indexRouter');
 const adminRouter = require('./routes/adminRouter');
+const postrouter = require('./routes/postrouter');
 
 const app = express();
 const PORT = 3000;
@@ -30,6 +31,7 @@ app.use(session({
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
+app.use('/post', postrouter);
 
 // app.use((req, res, next) => {
 //   const error = createError(404, 'Запрашиваемой страницы не существует на сервере.');

@@ -1,7 +1,7 @@
 //fetch for login error
-console.log(document.forms)
+
 const { adminEnteringForm } = document.forms;
-console.log(adminEnteringForm);
+
 if(adminEnteringForm) {
   adminEnteringForm.addEventListener('submit', async (e) => {
   e.preventDefault();
