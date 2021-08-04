@@ -5,6 +5,8 @@ npm i cookie-parser;
 npm i express-session;
 npm i session-file-store;
 npm i morgan;
+npm i path;
+npm i multer;
 
 branch: 
 Daniil - db;

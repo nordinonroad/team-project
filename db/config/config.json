@@ -4,20 +4,20 @@
     "password": 333,
     "database": "teamproject",
     "host": "127.0.0.1",
-    "dialect": "postgess"
+    "dialect": "postgres"
   },
   "test": {
     "username": "admin",
     "password": 333,
     "database": "teamproject",
     "host": "127.0.0.1",
-    "dialect": "postgess"
+    "dialect": "postgres"
   },
   "production": {
     "username": "admin",
     "password": 333,
     "database": "teamproject",
     "host": "127.0.0.1",
-    "dialect": "postgess"
+    "dialect": "postgres"
   }
 }
