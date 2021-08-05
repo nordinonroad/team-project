@@ -3,8 +3,9 @@ const router = express.Router();
 const { Blog } = require('../db/models');
 
 
-router.get('/blog', (req, res) => {
-  res.render('blog');
+router.get('/blog', async (req, res) => {
+  const allBlogs = await Blog.findAll();
+  res.render('blog', { allBlogs });
 });
 
 router.post('/blog', async (req, res) => {

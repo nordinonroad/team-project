@@ -6,4 +6,10 @@
 </form>
 <hr>
 
-<img src="/uploads/nikesb-gino-poets-bruin-banner_41be9b43921cad2e570195540bd7d8fc.jpg">
+<div>
+  {{#each allNews}}
+  <img src="{{this.newsimg}}">
+  <h1>{{this.newstitle}}</h1>
+  <p>{{this.newstext}}</p>
+  {{/each}}
+</div>

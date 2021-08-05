@@ -5,3 +5,11 @@
   <button>send</button>
 </form>
 <hr>
+
+<div>
+  {{#each allBlogs}}
+  <img src="{{this.blogimg}}">
+  <h1>{{this.blogtitle}}</h1>
+  <p>{{this.blogtext}}</p>
+  {{/each}}
+</div>
