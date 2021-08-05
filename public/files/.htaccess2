@@ -1,0 +1,83 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+
+DirectoryIndex index.html
+
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} /robots.txt
+RewriteCond "%{DOCUMENT_ROOT}/robots_%{HTTP_HOST}.txt" -f
+RewriteRule ^(.*)$ robots_%{HTTP_HOST}.txt [NC,L]
+RewriteRule ^index$ page2897667.html [NC]
+RewriteRule ^index/$ page2897667.html [NC]
+
+RewriteRule ^price$ page2902066.html [NC]
+RewriteRule ^price/$ page2902066.html [NC]
+
+RewriteRule ^contacts$ page2902098.html [NC]
+RewriteRule ^contacts/$ page2902098.html [NC]
+
+RewriteRule ^news$ page2902122.html [NC]
+RewriteRule ^news/$ page2902122.html [NC]
+
+RewriteRule ^friends$ page2908635.html [NC]
+RewriteRule ^friends/$ page2908635.html [NC]
+
+RewriteRule ^registration$ page2911096.html [NC]
+RewriteRule ^registration/$ page2911096.html [NC]
+
+RewriteRule ^likvidatsiya-firm-v-permi$ page2911122.html [NC]
+RewriteRule ^likvidatsiya-firm-v-permi/$ page2911122.html [NC]
+
+RewriteRule ^sud-i-arbitrazh$ page2911167.html [NC]
+RewriteRule ^sud-i-arbitrazh/$ page2911167.html [NC]
+
+RewriteRule ^predostavlenie-yuridicheskih-adresov-v-permi$ page2912294.html [NC]
+RewriteRule ^predostavlenie-yuridicheskih-adresov-v-permi/$ page2912294.html [NC]
+
+RewriteRule ^registratsiya-ip$ page2912343.html [NC]
+RewriteRule ^registratsiya-ip/$ page2912343.html [NC]
+
+RewriteRule ^registratsiya-izmenenij$ page2912456.html [NC]
+RewriteRule ^registratsiya-izmenenij/$ page2912456.html [NC]
+
+RewriteRule ^gotovye-firmy-v-permi$ page2912684.html [NC]
+RewriteRule ^gotovye-firmy-v-permi/$ page2912684.html [NC]
+
+RewriteRule ^registratsiya-ofshornyh-kompanij$ page2912716.html [NC]
+RewriteRule ^registratsiya-ofshornyh-kompanij/$ page2912716.html [NC]
+
+RewriteRule ^izgotovlenie-pechatej-i-shtampov$ page2912748.html [NC]
+RewriteRule ^izgotovlenie-pechatej-i-shtampov/$ page2912748.html [NC]
+
+RewriteRule ^dopuski-sro$ page2912768.html [NC]
+RewriteRule ^dopuski-sro/$ page2912768.html [NC]
+
+RewriteRule ^vzyskanie-dolgov$ page2912785.html [NC]
+RewriteRule ^vzyskanie-dolgov/$ page2912785.html [NC]
+
+RewriteRule ^bankrotstbo$ page2914362.html [NC]
+RewriteRule ^bankrotstbo/$ page2914362.html [NC]
+
+RewriteRule ^dolgi$ page2914390.html [NC]
+RewriteRule ^dolgi/$ page2914390.html [NC]
+
+RewriteRule ^buhgalter$ page2914439.html [NC]
+RewriteRule ^buhgalter/$ page2914439.html [NC]
+
+RewriteRule ^ocenka$ page2914516.html [NC]
+RewriteRule ^ocenka/$ page2914516.html [NC]
+
+RewriteRule ^o-nas$ page3038987.html [NC]
+RewriteRule ^o-nas/$ page3038987.html [NC]
+
+RewriteRule ^favicon.ico$ https://static.tildacdn.com/tild3764-6631-4931-a338-356361343936/tildafavicon.ico [R=302,L]
+
