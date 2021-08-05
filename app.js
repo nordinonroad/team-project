@@ -9,7 +9,7 @@ const newsRouter = require('./routes/newsRouter');
 
 const storageConfig = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./public/uploads");
+    cb(null, './public/uploads');
   },
   filename: (req, file, cb) =>{
     cb(null, file.originalname);
@@ -20,7 +20,7 @@ const storageConfig = multer.diskStorage({
 app.set('view engine', 'hbs');
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(multer({storage:storageConfig}).single("file"));
+app.use(multer({ storage: storageConfig }).single('file'));
 
 app.use('/', blogRouter);
 app.use('/admin', newsRouter);
