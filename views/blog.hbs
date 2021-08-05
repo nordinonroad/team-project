@@ -1,0 +1,15 @@
+<form action="/blog" method="POST" name="blogForm" enctype="multipart/form-data">
+  <input placeholder="Blog Title" type="text" name="blogtitle"><br>
+  <textarea placeholder="Enter post text" name="blogtext"></textarea><br>
+  <input placeholder="Upload picture" type="file" name="file">
+  <button>send</button>
+</form>
+<hr>
+
+<div>
+  {{#each allBlogs}}
+  <img src="{{this.blogimg}}">
+  <h1>{{this.blogtitle}}</h1>
+  <p>{{this.blogtext}}</p>
+  {{/each}}
+</div>

@@ -1,7 +1,15 @@
 <form action="/admin/news" method="post" name="newsForm" enctype="multipart/form-data">
-  <input placeholder="Title" type="text" name="newstitle"><br>
+  <input placeholder="News Title" type="text" name="newstitle"><br>
   <textarea placeholder="Enter news text" name="newstext"></textarea><br>
   <input placeholder="Upload picture" type="file" name="file">
   <button>Send</button>
 </form>
 <hr>
+
+<div>
+  {{#each allNews}}
+  <img src="{{this.newsimg}}">
+  <h1>{{this.newstitle}}</h1>
+  <p>{{this.newstext}}</p>
+  {{/each}}
+</div>
