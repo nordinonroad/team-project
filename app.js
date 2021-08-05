@@ -1,6 +1,5 @@
 const express = require('express');
-const hbs = require('hbs')
-const createError = require('http-errors');
+const hbs = require('hbs');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
@@ -17,10 +16,9 @@ const oldWebsiteRouter = require('./routes/oldWebsiteRouter');
 const app = express();
 const PORT = 3000;
 
-
 const storageConfig = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./public/uploads");
+    cb(null, './public/uploads');
   },
   filename: (req, file, cb) =>{
     cb(null, file.originalname);
@@ -45,22 +43,19 @@ app.use(session({
   store: new FileStore({}),
 }));
 
-//res locals login
-app.use((req,res,next) => {
-  res.locals.login = req.session.login; 
+app.use((req, res, next) => {
+  res.locals.login = req.session.login;
   // console.log('2141241244121', req.session.login)
   next();
-})
+});
 
-
-app.use(multer({storage:storageConfig}).single("file"));
+app.use(multer({ storage: storageConfig }).single('file'));
 app.use('/', blogRouter);
 app.use('/admin', newsRouter);
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/post', postrouter);
-app.use('/', oldWebsiteRouter)
-
+app.use('/', oldWebsiteRouter);
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);

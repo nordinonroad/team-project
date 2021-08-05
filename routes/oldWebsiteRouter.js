@@ -1,8 +1,4 @@
-const router = require("express").Router();
-
-router.get('/', (req, res) => {
-  res.render('index');
-});
+const router = require('express').Router();
 
 router.get('/index', (req, res) => {
   res.render('index');
@@ -20,8 +16,8 @@ router.get('/news', (req, res) => {
   res.render('pages/news');
 });
 
-router.get('/blog', (req, res) => {
-  res.render('pages/blog');
+router.get('/blogg', (req, res) => {
+  res.render('pages/blogg');
 });
 
 router.get('/friends', (req, res) => {

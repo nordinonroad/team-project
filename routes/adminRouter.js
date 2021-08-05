@@ -1,4 +1,4 @@
-const router = require("express").Router();
+const router = require('express').Router();
 
 // protection middleware
 const sessionChecker = (req, res, next) => {
@@ -26,16 +26,15 @@ router.post("/newsblogdiv", async (req, res) => {
   if (login === "artem" && password === "123") {
     req.session.login = login;
     req.session.password = password;
-    console.log('=======>', req.session.login)
-    
+    console.log('=======>', req.session.login);
     res.sendStatus(200);
   } else {
     res.sendStatus(401);
   }
-  // }
 });
 
 //logout
+
 router.get('/logout', (req, res) => {
   req.session.destroy();
   res.clearCookie('login');
