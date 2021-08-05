@@ -1,15 +1,54 @@
-<form action="/blog" method="POST" name="blogForm" enctype="multipart/form-data">
-  <input placeholder="Blog Title" type="text" name="blogtitle"><br>
-  <textarea placeholder="Enter post text" name="blogtext"></textarea><br>
-  <input placeholder="Upload picture" type="file" name="file">
-  <button>send</button>
+<div class="t698__title t-title t-title_xs" style="" field="title">Добавление поста в блог</div>
+<form action="/blog" method="POST" name="blogForm" enctype="multipart/form-data" id="form109332833" role="form" data-formactiontype="2" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_2 form ajax-form" data-success-callback="t698_onSuccess" >
+    <input type="hidden" name="formservices[]" value="910b4c00e9999ef0e0af1fb7e62eeb8a" class="js-formaction-services"> 
+    <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div>
+    <div class="t-form__inputsbox">
+      <div class="t-input-group t-input-group_nm" data-input-lid="1495646533382">
+          <div class="t-input-block">
+            <input placeholder="Заголовок" type="text" name="blogtitle" data-name="name" class="t-input js-tilda-rule " value="" data-tilda-req="1" data-tilda-rule="name" style="color:#000000; background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;"> 
+            <div class="t-input-error"></div>
+          </div>
+      </div>
+      <div class="t-input-group t-input-group_ph" data-input-lid="1495646545048">
+          <div class="t-input-block">
+            <textarea placeholder="Текст поста" name="blogtext" type="text" class="t-input js-tilda-rule" style="color:#000000; background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px; height: 180px"></textarea>
+            <div class="t-input-error"></div>
+          </div>
+      </div>
+      <div class="t-form__errorbox-middle">
+          <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+            <div class="t-form__errorbox-text t-text t-text_md">
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+                <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+            </div>
+          </div>
+      </div>
+      <div class="t-form__submit">
+        <input type="file" name="file" style="color: white; font-size: 15px; border-radius: 5px">
+      </div>
+      <div class="t-form__submit">
+        <button class="t-submit" style="color:#ffffff;background-color:#1f5bff;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;" >Опубликовать</button>
+      </div>
+      <div class="t698__title t-title t-title_xs" style="font-size: 20px;" id="errorMessage" ></div>
+    </div>
+    <div class="t-form__errorbox-bottom">
+      <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+          <div class="t-form__errorbox-text t-text t-text_md">
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+            <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+          </div>
+      </div>
+    </div>
 </form>
-<hr>
+<style>#rec109332833 input::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input:-ms-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea:-ms-input-placeholder {color:#000000; opacity: 0.5;}</style>
 
-<div>
-  {{#each allBlogs}}
-  <img src="{{this.blogimg}}">
-  <h1>{{this.blogtitle}}</h1>
-  <p>{{this.blogtext}}</p>
-  {{/each}}
-</div>

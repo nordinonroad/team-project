@@ -1,5 +1,8 @@
 const router = require('express').Router();
 
+const { Blog } = require('../db/models');
+const { New } = require('../db/models');
+
 router.get('/index', (req, res) => {
   res.render('index');
 });
@@ -12,12 +15,14 @@ router.get('/contacts', (req, res) => {
   res.render('pages/contacts');
 });
 
-router.get('/news', (req, res) => {
-  res.render('pages/news');
+router.get('/newsPage', async (req, res) => {
+  const allNews = await New.findAll();
+  res.render('newsPage', { allNews });
 });
 
-router.get('/blogg', (req, res) => {
-  res.render('pages/blogg');
+router.get('/blogg', async (req, res) => {
+  const allBlogs = await Blog.findAll();
+  res.render('blogg', { allBlogs });
 });
 
 router.get('/friends', (req, res) => {

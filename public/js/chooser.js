@@ -1,4 +1,5 @@
 const { buttonActionForm } = document.forms;
+console.log(buttonActionForm);
 //console.log(buttonActionForm);
 buttonActionForm.addEventListener('click', async (event) => {
   event.preventDefault();
@@ -10,9 +11,8 @@ buttonActionForm.addEventListener('click', async (event) => {
     headers: { "Content-Type": 'application/json' },
     body: JSON.stringify({ id }),
   });
-
-  const newsBlogsDiv = document.querySelector('.newsBlogsDiv');
+  const formEnterDiv = document.querySelector('.t698__mainwrapper');
   const result = await fetch1.text();
-    newsBlogsDiv.innerHTML = result;
+  formEnterDiv.innerHTML = result;
 }
 );

@@ -1,7 +1,7 @@
 //fetch for login error
 
 const adminEnteringForm = document.querySelector('#form109332833');
-console.log(adminEnteringForm)
+console.log(adminEnteringForm);
 if(adminEnteringForm) {
   adminEnteringForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -17,8 +17,9 @@ if(adminEnteringForm) {
     if(statusOfAuth === 'Unauthorized') {
       const errorDiv = document.querySelector('#errorMessage');
       errorDiv.innerText = 'Данные введены некорректно';
-    } else 
-    window.location.replace('/admin/newsblogdiv');
+    } else {
+      window.location.replace('/admin/newsblogdiv');
+    }
 })
 }
 

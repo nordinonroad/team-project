@@ -5,7 +5,7 @@ const { New } = require('../db/models');
 
 router.get('/news', async (req, res) => {
   const allNews = await New.findAll();
-  res.render('news', { allNews });
+  res.render('newsPage', { allNews });
 });
 
 router.post('/news', async (req, res) => {

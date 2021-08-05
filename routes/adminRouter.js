@@ -26,7 +26,6 @@ router.post("/newsblogdiv", async (req, res) => {
   if (login === "artem" && password === "123") {
     req.session.login = login;
     req.session.password = password;
-    console.log('=======>', req.session.login);
     res.sendStatus(200);
   } else {
     res.sendStatus(401);
