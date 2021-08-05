@@ -1,0 +1,21 @@
+User-Agent: *
+Disallow: /page2902066.html
+Disallow: /price
+Disallow: /page2902098.html
+Disallow: /contacts
+Disallow: /page2908635.html
+Disallow: /friends
+Disallow: /page6147713.html
+Disallow: /page6147782.html
+Disallow: /tilda/form*
+Disallow: /tilda/rec*
+Disallow: /tilda/click*
+Disallow: /tilda/scroll*
+Disallow: /tilda/popup*
+Disallow: /tilda/cart*
+Disallow: /tilda/product*
+Disallow: /tilda/event*
+Disallow: /*_escaped_fragment_*
+Disallow:
+Sitemap: http://silver-company.ru/sitemap.xml
+Host: silver-company.ru

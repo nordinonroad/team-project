@@ -12,6 +12,7 @@ const adminRouter = require('./routes/adminRouter');
 const postrouter = require('./routes/postrouter');
 const blogRouter = require('./routes/blogRouter');
 const newsRouter = require('./routes/newsRouter');
+const oldWebsiteRouter = require('./routes/oldWebsiteRouter');
 
 const app = express();
 const PORT = 3000;
@@ -58,6 +59,7 @@ app.use('/admin', newsRouter);
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/post', postrouter);
+app.use('/', oldWebsiteRouter)
 
 
 app.listen(PORT, () => {
