@@ -24,10 +24,23 @@ app.use(session({
   secret: '8u54trgh9but349rgjoi53eigrpj4wegrjpo',
   resave: false,
   saveUninitialized: false,
-  name: 'userLogin',
+  name: 'login',
   cookie: { secure: false },
   store: new FileStore({}),
 }));
+
+//locals login
+app.use((req,res,next) => {
+  res.locals.login = req.session.login; 
+  console.log('2141241244121', req.session.login)
+  next();
+})
+
+//protection middleware
+// app.use((req,res,next) => {
+//   if(!req.session.login) res.redirect('/admin');
+//   next();
+// })
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
@@ -40,6 +53,7 @@ app.use('/post', postrouter);
 
 // res.locals.message = err.message;
 // res.locals.error = error;
+
 
 app.listen(PORT, () => {
   console.log(`server started PORT: ${PORT}`);
