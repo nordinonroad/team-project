@@ -29,18 +29,15 @@ app.use(session({
   store: new FileStore({}),
 }));
 
-//locals login
+//res locals login
 app.use((req,res,next) => {
   res.locals.login = req.session.login; 
   console.log('2141241244121', req.session.login)
   next();
 })
 
-//protection middleware
-// app.use((req,res,next) => {
-//   if(!req.session.login) res.redirect('/admin');
-//   next();
-// })
+
+
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);

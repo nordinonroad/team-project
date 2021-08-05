@@ -1,10 +1,19 @@
 const router = require("express").Router();
 
+// protection middleware
+const sessionChecker = (req, res, next) => {
+  if (req.session.login) {
+    next();
+  } else {
+    res.redirect('/');
+  }
+};
+
 router.get("/", (req, res) => {
   res.render("adminMain");
 });
 
-router.get("/newsblogdiv", (req, res) => {
+router.get("/newsblogdiv", sessionChecker, (req, res) => {
   res.render("newsblogdiv");
 });
 
