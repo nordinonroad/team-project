@@ -10,6 +10,9 @@ const sessionChecker = (req, res, next) => {
 };
 
 router.get("/", (req, res) => {
+  if (req.session.login) {
+    return res.redirect('/admin/newsblogdiv');
+  }
   res.render("adminMain");
 });
 

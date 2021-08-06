@@ -3,8 +3,12 @@ const router = require('express').Router();
 const { Blog } = require('../db/models');
 const { New } = require('../db/models');
 
-router.get('/index', (req, res) => {
+router.get('/', (req, res) => {
   res.render('index');
+});
+
+router.get('/index', (req, res) => {
+  res.redirect('/');
 });
 
 router.get('/price', (req, res) => {
