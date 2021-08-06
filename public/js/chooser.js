@@ -1,6 +1,5 @@
 const { buttonActionForm } = document.forms;
 console.log(buttonActionForm);
-//console.log(buttonActionForm);
 buttonActionForm.addEventListener('click', async (event) => {
   event.preventDefault();
   //console.log(event.target);

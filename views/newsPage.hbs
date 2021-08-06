@@ -44,6 +44,7 @@ crossorigin="anonymous"></script>
               webvisor:true
          });
       </script>
+      <script defer src="/js/deleteNews.js"></script>
       <noscript>
          <div><img src="https://mc.yandex.ru/watch/50555635" style="position:absolute; left:-9999px;" alt="" /></div>
       </noscript>
@@ -171,33 +172,118 @@ crossorigin="anonymous"></script>
                      </div>
                   </div>
                </div>
-                {{#each allNews}}
-                <div class="t-cover" id="recorddiv336328891" bgimgfield="img" style="height:100vh; background-images:url('{{this.newsimg}}');" >
-               <div class="t-cover__carrier" id="coverCarry336328891" data-content-cover-id="336328891" data-content-cover-bg="{{this.newsimg}}" data-content-cover-height="100vh" data-content-cover-parallax="" style="height:100vh;background-attachment:scroll; "></div>
-               <div class="t-cover__filter" style="height:100vh;background-images: -moz-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -o-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -ms-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXimagesTransform.Microsoft.gradient(startColorStr='#fe000000', endColorstr='#fe000000');"></div>
-               <div class="t148">
-                  <div class="t-container_100">
-                     <div class="t-cover__wrapper t-valign_bottom" style="height:100vh;"> </div>
-                  </div>
-               </div>
+               <div class='bigNewsContainer'>
+          {{#each allNews}}
+          <div class="deleteNewsContainer" id="{{this.id}}">
+            <div class="t-cover" id="recorddiv336328891" bgimgfield="img"
+              style="height:100vh; background-images:url('{{this.newsimg}}');">
+              <div class="t-cover__carrier" id="coverCarry336328891" data-content-cover-id="336328891"
+                data-content-cover-bg="{{this.newsimg}}" data-content-cover-height="100vh"
+                data-content-cover-parallax="" style="height:100vh;background-attachment:scroll; "></div>
+              <div class="t-cover__filter"
+                style="height:100vh;background-images: -moz-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -webkit-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -o-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: -ms-linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));background-images: linear-gradient(top, rgba(0,0,0,0.0), rgba(0,0,0,0.0));filter: progid:DXimagesTransform.Microsoft.gradient(startColorStr='#fe000000', endColorstr='#fe000000');">
+              </div>
+              <div class="t148">
+                <div class="t-container_100">
+                  <div class="t-cover__wrapper t-valign_bottom" style="height:100vh;"> </div>
+                </div>
+              </div>
             </div>
-         </div>
-         <div id="rec336330901" class="r t-rec t-rec_pt_60 t-rec_pb_60" style="padding-top:60px;padding-bottom:60px; " data-record-type="61" >
-            <!-- T051 -->
-            <div class="t051">
-               <div class="t-container">
+
+            <div id="rec336330901" class="r t-rec t-rec_pt_60 t-rec_pb_60"
+              style="padding-top:60px;padding-bottom:60px; " data-record-type="61">
+              <!-- T051 -->
+              <div class="t051">
+                <div class="t-container">
                   <div class="t-col t-col_12 ">
-                     <div class="t051__text t-text t-text_md" style="" field="text">
-                        <p style="text-align: left;"><strong>{{this.newstitle}}</strong></p>
-                        <br />
-                        <p style="text-align: left;">{{this.newstext}}</p>
+                    <div class="t051__text t-text t-text_md" style="" field="text">
+                      <p style="text-align: left;"><strong>{{this.newstitle}}</strong>
+                      {{#if ../login}}
+                      <button class="trashCan" style="width: 20px; height: 20px; background-color: transparent; border: none; margin-left: 10px; cursor: pointer">
+                            <img
+                            src="https://image.flaticon.com/icons/png/512/1345/1345823.png"
+                            style="width: 100%; height: auto; pointer-events: none;"></button>
+                      {{/if}}
+                      </p>
+                      <br />
+                      <p style="text-align: left; word-wrap: break-word">{{this.newstext}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="rec337863551" class="r t-rec" style=" " data-animationappear="off" data-record-type="160">
+            </div>
+          </div>
+          {{/each}}
+        </div> 
+               <!--footer-->
+         <div id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="691983" data-tilda-page-id="6147782" data-tilda-formskey="8642c43ee30b875a3e6e97d41662edaa" >
+            <div id="rec109332833" class="r t-rec" style=" " data-animationappear="off" data-record-type="698" >
+               <!-- t698 --><!-- cover -->
+               <div class="t-cover" id="recorddiv109332833" bgimgfield="img" style="height:60vh; background-image:url('images/tild3636-6561-4261-b234-323863346534__-__resize__20x__237.jpg');" >
+                  <div class="t-cover__carrier" id="coverCarry109332833" data-content-cover-id="109332833" data-content-cover-bg="images/tild3636-6561-4261-b234-323863346534__237.jpg" data-content-cover-height="60vh" data-content-cover-parallax="" style="height:60vh;background-attachment:scroll; "></div>
+                  <div class="t-cover__filter" style="height:60vh;background-image: -moz-linear-gradient(top, rgba(26,26,26,0.70), rgba(26,26,26,0.70));background-image: -webkit-linear-gradient(top, rgba(26,26,26,0.70), rgba(26,26,26,0.70));background-image: -o-linear-gradient(top, rgba(26,26,26,0.70), rgba(26,26,26,0.70));background-image: -ms-linear-gradient(top, rgba(26,26,26,0.70), rgba(26,26,26,0.70));background-image: linear-gradient(top, rgba(26,26,26,0.70), rgba(26,26,26,0.70));filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#4c1a1a1a', endColorstr='#4c1a1a1a');"></div>
+                  <div class="t698">
+                     <div class="t-container ">
+                        <div class="t-width t-width_8 t698__mainblock">
+                           <div class="t-cover__wrapper t-valign_middle" style="height:60vh;">
+                              <div class="t698__mainwrapper" data-hook-content="covercontent">
+                                 <div class="t698__title t-title t-title_xs" style="" field="title">Записаться на консультацию</div>
+                                 <div>
+                                    <form id="form109332833" name='form109332833' role="form" action='' method='POST' data-formactiontype="2" data-inputbox=".t-input-group" class="t-form js-form-proccess t-form_inputs-total_2 form ajax-form" data-success-callback="t698_onSuccess" >
+                                       <input type="hidden" name="formservices[]" value="910b4c00e9999ef0e0af1fb7e62eeb8a" class="js-formaction-services"> 
+                                       <div class="js-successbox t-form__successbox t-text t-text_md" style="display:none;"></div>
+                                       <div class="t-form__inputsbox">
+                                          <div class="t-input-group t-input-group_nm" data-input-lid="1495646533382">
+                                             <div class="t-input-block">
+                                                <input type="text" name="name" data-name="name" class="t-input js-tilda-rule " value="" placeholder="Имя" data-tilda-req="1" data-tilda-rule="name" style="color:#000000; background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;"> 
+                                                <div class="t-input-error"></div>
+                                             </div>
+                                          </div>
+                                          <div class="t-input-group t-input-group_ph" data-input-lid="1495646545048">
+                                             <div class="t-input-block">
+                                                <input type="tel" name="phone" data-name="phone" class="t-input js-tilda-rule " value="" placeholder="Номер Вашего телефона" data-tilda-req="1" data-tilda-rule="phone" pattern="[0-9]*" style="color:#000000; background-color:#ffffff; border-radius: 7px; -moz-border-radius: 7px; -webkit-border-radius: 7px;"> 
+                                                <div class="t-input-error"></div>
+                                             </div>
+                                          </div>
+                                          <div class="t-form__errorbox-middle">
+                                             <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+                                                <div class="t-form__errorbox-text t-text t-text_md">
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+                                                   <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="t-form__submit"> <button type="submit" class="t-submit" style="color:#ffffff;background-color:#1f5bff;border-radius:7px; -moz-border-radius:7px; -webkit-border-radius:7px;" >Отправить заявку</button> </div>
+                                       </div>
+                                       <div class="t-form__errorbox-bottom">
+                                          <div class="js-errorbox-all t-form__errorbox-wrapper" style="display:none;">
+                                             <div class="t-form__errorbox-text t-text t-text_md">
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-all"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-req"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-email"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-name"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-phone"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-minlength"></p>
+                                                <p class="t-form__errorbox-item js-rule-error js-rule-error-string"></p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </form>
+                                    <style>#rec109332833 input::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 input:-ms-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea::-webkit-input-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea::-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea:-moz-placeholder {color:#000000; opacity: 0.5;}	#rec109332833 textarea:-ms-input-placeholder {color:#000000; opacity: 0.5;}</style>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-         </div>
-         <div id="rec337863551" class="r t-rec" style=" " data-animationappear="off" data-record-type="160" >
-                {{/each}}
                <script type="text/javascript"> $('#rec109332833').find('.js-form-proccess').on('tildaform:aftererror', function(e){ e.preventDefault(); t698_fixcontentheight('109332833'); }); $('.t698').bind('displayChanged',function(){ t698_fixcontentheight('109332833'); }); </script>
                <style>#rec109332833 .t-submit:hover{ background-color: #ffffff !important; color: #000000 !important;	}	#rec109332833 .t-submit{ -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;	}</style>
                <style>#rec109332833 .t-btn[data-btneffects-first],
@@ -212,14 +298,8 @@ crossorigin="anonymous"></script>
             </div>
             <div id="rec109332847" class="r t-rec" style=" " data-animationappear="off" data-record-type="570" >
                <!-- t570 -->
-                              <div class="t570">
+               <div class="t570">
                   <div class="t-width t-width_100 t570__mainblock" style="margin:0 auto; background-color:#00003e;">
-                     <!--<div class="t-map-lazyload t570__map t570__col" data-maplazy-load="false">
-                        <div class="t-map" id="separateMap109332847" data-map-language="Ru" data-map-x="-74.005941" data-map-y="40.7127837" data-map-zoom="14" data-map-title="Контакты:" style="width:100%; height:50vh;" data-map-style='[{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#d3d3d3"}]},{"featureType":"transit","stylers":[{"color":"#808080"},{"visibility":"off"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#b3b3b3"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.local","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"weight":1.8}]},{"featureType":"road.local","elementType":"geometry.stroke","stylers":[{"color":"#d7d7d7"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#ebebeb"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"color":"#a7a7a7"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#efefef"}]},{"featureType":"road","elementType":"labels.text.fill","stylers":[{"color":"#696969"}]},{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"visibility":"on"},{"color":"#737373"}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#d6d6d6"}]},{"featureType":"road","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"color":"#dadada"}]}]' ></div>
-                        <script type="text/javascript"> var arMapMarkers109332847 = [ { title:"Наш офис", descr:"", lat:"58.008829", lng:"56.242289", }, ];
-                           $(document).ready(function() { t_map_lazyload_add_map(); $(window).bind('scroll', t_throttle(t_map_lazyload_add_map, 300)); function t_map_lazyload_add_map() { var windowHeight = $(window).height(); var scrollDiffHeigth = 700; var rec = $('#rec' + 109332847); var map = rec.find('.t-map-lazyload'); if (map.length != 0) { var blockTop = map.offset().top; if ($(window).scrollTop() > blockTop - windowHeight - scrollDiffHeigth) { if (map.attr('data-maplazy-load') == 'false') { map.attr('data-maplazy-load', 'true'); t_appendYandexMap("109332847","c5c07cac-1016-4fbb-a294-314b2c221b33"); } } } }
-                           });
-                        </script> -->
                      </div>
                      <div class="t570__col t570__col_text" style="background-color:#00003e; height: 240px">
                         <div class="t570__contentbox" style="background-color:#00003e; height:50vh;">
@@ -233,8 +313,6 @@ crossorigin="anonymous"></script>
                   </div>
                </div>
                <script type="text/javascript"> $(document).ready(function() { setTimeout(function() { t570_init('109332847'); }, 500); }); var fireRefreshEventOnWindow = function () { var evt = document.createEvent("HTMLEvents"); evt.initEvent('resize', true, false); window.dispatchEvent(evt); }; $('.t570').bind('displayChanged',function(){ fireRefreshEventOnWindow(); });</script> 
-            </div>
-            <div id="rec112856440" class="r t-rec" style=" " data-animationappear="off" data-record-type="651" >
             </div>
             <div id="rec112856440" class="r t-rec" style=" " data-animationappear="off" data-record-type="651" >
                <!-- T651 -->

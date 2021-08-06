@@ -44,8 +44,9 @@ app.use(session({
 }));
 
 app.use((req, res, next) => {
+  console.log('==========>', req.session.login);
   res.locals.login = req.session.login;
-  // console.log('2141241244121', req.session.login)
+  console.log('2141241244121', req.session.login);
   next();
 });
 
