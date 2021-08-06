@@ -114,6 +114,7 @@ crossorigin="anonymous"></script>
                      <div class="t280__menu__bg" style="background-color:#00003e; opacity:1;"></div>
                      <div class="t280__menu__container">
                         <div class="t280__menu t-width t-width_6"> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/index" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Главная</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/o-nas" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">О нас</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/uslugi" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Услуги</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/friends" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Партнеры</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/price" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Прайс-лист</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/contacts" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Контакты</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="/news" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Новости</a> <a class="t280__menu__item t-title t-title_xl t-menu__link-item" href="#submenu:more" data-menu-submenu-hook="" style="color:#ffffff;font-weight:300;">Ваш город: Москва</a> </div>
+                        
                         <div class="t280__bottom t-width t-width_6">
                            <div class="t280__descr t280__bottom__item t-descr t-descr_xs" style="color:#ffffff;"><a href="tel: +7 (964) 197-66-34">+7 (964) 197-66-34</a><br />г. Москва, Большой Саввинский переулок, д.9, с.1, оф. 505.<br /></div>
                         </div>
@@ -166,12 +167,25 @@ crossorigin="anonymous"></script>
                         <div class="t-section__title t-title t-title_xs" field="btitle">
                            <div style="color:#000000;" data-customstyle="yes">
                               Новости
+                              {{#if login}}
+                               <br> <a style="font-size: 22px;" href="/admin/newsblogdiv">Добавить новость</a>
+                              {{/if}}
                               <div style="color:#ffffff;" data-customstyle="yes"></div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
+               {{!-- {{#if login}}
+                     <div class="t-section__topwrapper t-align_center">
+                        <div class="t-section__title t-title t-title_xs" field="btitle">
+                           <div style="color:#000000;" data-customstyle="yes">
+                              <a href="">Добавить новость</a> 
+                              <div style="color:#ffffff;" data-customstyle="yes"></div>
+                           </div>
+                        </div>
+                     </div>
+               {{/if}} --}}
                <div class='bigNewsContainer'>
           {{#each allNews}}
           <div class="deleteNewsContainer" id="{{this.id}}">
