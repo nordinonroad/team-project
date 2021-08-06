@@ -15,5 +15,12 @@ router.post('/blog', async (req, res) => {
   res.redirect('/blog');
 });
 
+router.delete('/blog/delete/:id', async (req, res) => {
+  const { id } = req.params;
+  const del = await Blog.findOne({ where: { id } });
+  await del.destroy();
+  res.sendStatus(200);
+});
+
 
 module.exports = router;

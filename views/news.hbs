@@ -1,3 +1,5 @@
+<script defer src="/js/client2.js"></script>
+
 <form action="/admin/news" method="post" enctype="multipart/form-data">
   <input placeholder="Title" type="text" name="newstitle"><br>
   <textarea placeholder="Enter news text" name="newstext"></textarea><br>
@@ -6,10 +8,17 @@
 </form>
 <hr>
 
-<div>
+
+
+<div id="containerNews">
   {{#each allNews}}
-  <img src="{{this.newsimg}}">
-  <h1>{{this.newstitle}}</h1>
-  <p>{{this.newstext}}</p>
+  <div class="del" id="{{this.id}}">
+    <img src="{{this.newsimg}}">
+    <h1>{{this.newstitle}}</h1>
+    <p>{{this.newstext}}</p>
+    <a href="/admin/news/delete/{{this.id}}"><button>delete</button></a>
+  </div>
   {{/each}}
 </div>
+
+

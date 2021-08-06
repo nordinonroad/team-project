@@ -15,5 +15,12 @@ router.post('/news', async (req, res) => {
   res.redirect('/admin/news');
 });
 
+router.delete('/news/delete/:id', async (req, res) => {
+  const { id } = req.params;
+  const deleteFromDb = await New.findOne({ where: { id } });
+  await deleteFromDb.destroy();
+  res.sendStatus(200);
+});
+
 
 module.exports = router;

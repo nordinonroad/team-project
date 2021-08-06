@@ -1,3 +1,5 @@
+<script defer src="/js/client.js"></script>
+
 <form action="/blog" method="POST" enctype="multipart/form-data">
   <input placeholder="Title" type="text" name="blogtitle"><br>
   <textarea placeholder="Enter post text" name="blogtext"></textarea><br>
@@ -6,10 +8,13 @@
 </form>
 <hr>
 
-<div>
+<div id="container">
   {{#each allBlogs}}
-  <img src="{{this.blogimg}}">
-  <h1>{{this.blogtitle}}</h1>
-  <p>{{this.blogtext}}</p>
+  <div class="del" id={{this.id}}>
+    <img src="{{this.blogimg}}">
+    <h1>{{this.blogtitle}}</h1>
+    <p>{{this.blogtext}}</p>
+    <a href="/blog/delete/{{this.id}}"><button name="delete" id="delete">delete</button></a>
+  </div>
   {{/each}}
 </div>
