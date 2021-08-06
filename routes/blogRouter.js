@@ -4,7 +4,7 @@ const router = express.Router();
 const { Blog } = require('../db/models');
 
 router.get('/blogg', async (req, res) => {
-  const allBlogs = await Blog.findAll();
+  const allBlogs = await Blog.findAll({ order: [['id', 'DESC']] });
   res.render('blogg', { allBlogs });
 });
 

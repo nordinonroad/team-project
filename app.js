@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 
 app.use(multer({ storage: storageConfig }).single('file'));
 app.use('/', blogRouter);
-app.use('/admin', newsRouter);
+app.use('/', newsRouter);
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);
 app.use('/post', postrouter);

@@ -4,7 +4,7 @@ const router = express.Router();
 const { New } = require('../db/models');
 
 router.get('/newsPage', async (req, res) => {
-  const allNews = await New.findAll();
+  const allNews = await New.findAll({ order: [['id', 'DESC']] });
   res.render('newsPage', { allNews });
 });
 
