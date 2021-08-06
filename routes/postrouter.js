@@ -6,9 +6,11 @@ router.get('/buttonAdminAction', (req, res) =>{
 
 router.post('/buttonAdminAction', (req, res) => {
   const { id } = req.body;
-  console.log(req.body);
-  console.log('artemloh', id);
-  res.json({id});
+  // res.json({id});
+  if(id == 1) {
+    return res.render('news')
+  } 
+  res.render('blog')
 });
 
 module.exports = router;
